@@ -27,15 +27,7 @@ for Mesmer segmentation of MIBI TIFFs.
 app for calcuating cell measurements from whole-cell and nuclear masks.
 
 ## Metadata tools
-- [rdfpytest](https://github.com/WEHI-SODA-Hub/rdfpytest): Framework for running
-SHACL tests over RDF data in Python.
-- [RdfNav](https://github.com/WEHI-SODA-Hub/RdfNav): Utilities for navigating an
-RDF graph in Python.
-- [RdfCrate](https://github.com/WEHI-SODA-Hub/RdfCrate): Library for building
-RO-Crates using rdflib.
-- [OmeroCrate](https://github.com/WEHI-SODA-Hub/OmeroCrate): Tools for uploading
-an RO-Crate dataset to Omero.
-- [proclaim](https://github.com/WEHI-SODA-Hub/proclaim): RO-Crate profile
-generator from LinkML.
-- [cordful](https://github.com/WEHI-SODA-Hub/cordful): LinkML implementation of
-various linked data schemas, profiles vocabularies and ontologies.
+- [RdfCrate](https://github.com/WEHI-SODA-Hub/RdfCrate): Library for building RO-Crates using rdflib.
+- [OmeroCrate](https://github.com/WEHI-SODA-Hub/OmeroCrate): Tools for uploading an RO-Crate dataset to Omero.
+- [RdfNav](https://github.com/WEHI-SODA-Hub/RdfNav): Utilities for navigating an RDF graph in Python.
+- [rdfpytest](https://github.com/WEHI-SODA-Hub/rdfpytest): Framework for running SHACL tests over RDF data in Python.
