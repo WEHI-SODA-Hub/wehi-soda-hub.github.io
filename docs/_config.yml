@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The Spatial Omics Data Analytics Hub (SODA-Hub) supports WEHI's research at
   the cutting edge of spatial omics through the development of novel analysis
   tools, workflows and data management solutions.
+logo: /assets/images/soda-seg.png
   
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wehi-soda-hub.github.io"
