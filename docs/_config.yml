@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: WEHI SODA-Hub
+title: WEHI SODA Hub
 email: soda@wehi.edu.au
 repository: WEHI-SODA-Hub/wehi-soda-hub.github.io
 description: >- # this means to ignore newlines until "baseurl:"
-  The Spatial Omics Data Analytics Hub (SODA-Hub) supports WEHI's research at
+  The Spatial Omics Data Analytics Hub (SODA Hub) supports WEHI's research at
   the cutting edge of spatial omics through the development of novel analysis
   tools, workflows and data management solutions.
 logo: /assets/images/soda-seg.png

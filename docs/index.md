@@ -2,31 +2,84 @@
 layout: default
 ---
 
-# WEHI SODA-Hub
+# WEHI SODA Hub
 
-Spatial Omics Data Analytics (SODA) Hub supports spatial research at the Walter
-and Eliza Hall Institute of Medical Research (WEHI) in Parkville, Australia. The
-Hub is providing streamlined data management and analysis environment to
-accelerate research in spatial omics.
+The Spatial Omics Data Analytics (SODA) Hub was established to support and
+accelerate WEHI’s research using cutting-edge spatial omics technology by
+enabling robust data management and state-of-the-art analyses. Researchers in
+this field face unique challenges with large and complex multimodal datasets,
+and a growing ecosystem with rapidly changing technologies. The SODA Hub
+comprises an inter-disciplinary team with experience in research software
+engineering, bioinformatics, and bioimage analysis. The team is developing
+innovative data management, storage and analysis solutions, enabling scientists
+to work more efficiently with spatial omics data across a range of technologies.
+
+## The Team
+
+The SODA Hub project is being led by joint lead investigators [Professor Kelly
+Rogers](https://www.wehi.edu.au/researcher/kelly-rogers/), [Professor
+Marie-Liesse Labat](https://www.wehi.edu.au/researcher/marie-liesse-labat/) and
+[Professor Tony Papenfuss](https://www.wehi.edu.au/researcher/tony-papenfuss/).
+The technical team consists of:
+
+- Dr Marek Cmero – Senior Research Officer
+([@mcmero](https://github.com/mcmero))
+- Mr Michael Milton – Research Computing Engineer
+([@multimeric](https://github.com/multimeric))
+- Dr Pradeep Rajasekhar – Senior Research Officer
+([@pr4deepr](https://github.com/pr4deepr))
+- Dr Lachlan Whitehead – Senior Research Officer
+([@DrLachie](https://github.com/DrLachie))
+- Dr Julie Iskander – Head, Research Computing Platform
+([@jIskCoder](https://github.com/jIskCoder))
+
+## Data flows
+
+The SODA Hub is designing a streamlined environment from data ingestion to
+analysis. The figure below shows how data flows through the environment, with
+data transfer, metadata capture, and preprocessing handled in a streamlined
+workflow. Spatial omics users are then able to access and analyse their spatial
+data in numerous ways:
+- A metadata portal for validating and searching for metadata.
+- OMERO.web and PathViewer for image management, visualisation and annotation.
+- Seqera Platform for launching Nextflow pipelines for segmentation, phenotyping
+and other workflows on the local HPC.
+- Virtual Desktops via Open OnDemand for working interactively with data using
+QuPath or other tools.
+
+![SODA Workflows](assets/images/soda-workflows.png "Data flows in the SODA
+environment")
+
+## Software
 
 SODA is building and contributing to open-source software. Please see the 
 [WEHI-SODA-Hub](https://github.com/WEHI-SODA-Hub) GitHub page for a complete
 list of our public repositories.
 
-## Analysis tools and pipelines
+### Analysis tools and pipelines
 
 - [spatialvpt](https://github.com/WEHI-SODA-Hub/spatialvpt): Segmentation and QC
-workflow for MERSCOPE using vizgen-postprocessing tool.
-- [vizgen-postprocessing_container](https://github.com/WEHI-SODA-Hub/vizgen-postprocessing_container):
-Container for running vizgen-postprocessing tool with the cellpose2 plugin.
-- [spatialVis](https://github.com/WEHI-SODA-Hub/spatialVis): R package for
-downstream plots and spatial analyses for spatial proteomics.
-- [MibiSegmentation](https://github.com/WEHI-SODA-Hub/MibiSegmentation): A CLI
-for Mesmer segmentation of MIBI TIFFs.
-- [cellmeasurement](https://github.com/WEHI-SODA-Hub/cellmeasurement): Groovy
-app for calcuating cell measurements from whole-cell and nuclear masks.
+workflow for MERSCOPE using the vizgen-postprocessing tool via a parallelised
+and streamlined workflow.
+- [spatialproteomics](https://github.com/WEHI-SODA-Hub/spatialproteomics): Cell
+segmentation pipeline for spatial proteomics (COMET & MIBI). Can run patched
+segmentation using Cellpose via SOPA. Resolves whole-cells and nuclei and
+calculates cell measurements. Incorporates the these standalone tools:
+    - [MibiSegmentation](https://github.com/WEHI-SODA-Hub/MibiSegmentation): A
+    CLI for Mesmer segmentation of COMET and MIBI TIFFs used in the
+    spatialproteomics pipeline. Automatically combines membrane channels.
+    - [cellmeasurement](https://github.com/WEHI-SODA-Hub/cellmeasurement):
+    Groovy app for calculating cell measurements from whole-cell and nuclear
+    masks used in the spatialproteomics pipeline. Performs matching of
+    whole-cells and nuclei and automates calculation of measurements using the
+    QuPath API.
+    - [spatialVis](https://github.com/WEHI-SODA-Hub/spatialVis): R package for
+    downstream plots and spatial analyses for spatial proteomics. Provides
+    functions for plotting cell segmentation and phenotyping QC metrics, as well
+    as a report template for generating reports.
 
-## Metadata tools
+### Metadata tools
+
 - [rdfpytest](https://github.com/WEHI-SODA-Hub/rdfpytest): Framework for running
 SHACL tests over RDF data in Python.
 - [RdfNav](https://github.com/WEHI-SODA-Hub/RdfNav): Utilities for navigating an
@@ -35,7 +88,7 @@ RDF graph in Python.
 RO-Crates using rdflib.
 - [OmeroCrate](https://github.com/WEHI-SODA-Hub/OmeroCrate): Tools for uploading
 an RO-Crate dataset to Omero.
-- [proclaim](https://github.com/WEHI-SODA-Hub/proclaim): RO-Crate profile
-generator from LinkML.
-- [cordful](https://github.com/WEHI-SODA-Hub/cordful): LinkML implementation of
-various linked data schemas, profiles vocabularies and ontologies.
+
+## Funding
+The WEHI SODA Hub is made possible due to generous support of The Kinghorn
+Foundation.
