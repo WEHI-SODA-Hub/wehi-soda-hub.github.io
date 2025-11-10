@@ -16,6 +16,11 @@ to work more efficiently with spatial omics data across a range of technologies.
 
 ## The Team
 
+![SODA Team Photo](assets/images/soda-team-photo.jpg "L-R: Dr Julie Iskander, Dr
+Lachlan Whitehead, Professor Kelly Rogers, Mr Michael Milton, Professor
+Marie-Liesse Labat, Dr Pradeep Rajasekhar, Professor Tony Papenfuss, Dr Marek
+Cmero. Image credit: WEHI. 1G Royal Pde Parkville 3052 VIC Australia.")
+
 The SODA Hub project is being led by joint lead investigators [Professor Kelly
 Rogers](https://www.wehi.edu.au/researcher/kelly-rogers/), [Professor
 Marie-Liesse Labat](https://www.wehi.edu.au/researcher/marie-liesse-labat/) and
