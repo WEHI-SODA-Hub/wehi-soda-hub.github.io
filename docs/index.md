@@ -61,27 +61,38 @@ SODA is building and contributing to open-source software. Please see the
 [WEHI-SODA-Hub](https://github.com/WEHI-SODA-Hub) GitHub page for a complete
 list of our public repositories.
 
-### Analysis tools and pipelines
+### Pipelines
 
 - [spatialvpt](https://github.com/WEHI-SODA-Hub/spatialvpt): Segmentation and QC
 workflow for MERSCOPE using the vizgen-postprocessing tool via a parallelised
 and streamlined workflow.
-- [spatialproteomics](https://github.com/WEHI-SODA-Hub/spatialproteomics): Cell
+- [sp_segment](https://github.com/WEHI-SODA-Hub/sp_segment): Cell
 segmentation pipeline for spatial proteomics (COMET & MIBI). Can run patched
 segmentation using Cellpose via SOPA. Resolves whole-cells and nuclei and
-calculates cell measurements. Incorporates the these standalone tools:
-    - [MibiSegmentation](https://github.com/WEHI-SODA-Hub/MibiSegmentation): A
-    CLI for Mesmer segmentation of COMET and MIBI TIFFs used in the
-    spatialproteomics pipeline. Automatically combines membrane channels.
-    - [cellmeasurement](https://github.com/WEHI-SODA-Hub/cellmeasurement):
-    Groovy app for calculating cell measurements from whole-cell and nuclear
-    masks used in the spatialproteomics pipeline. Performs matching of
-    whole-cells and nuclei and automates calculation of measurements using the
-    QuPath API.
-    - [spatialVis](https://github.com/WEHI-SODA-Hub/spatialVis): R package for
-    downstream plots and spatial analyses for spatial proteomics. Provides
-    functions for plotting cell segmentation and phenotyping QC metrics, as well
-    as a report template for generating reports.
+calculates cell measurements.
+- [sp_celltype_preprocess](https://github.com/WEHI-SODA-Hub/sp_celltype_preprocess):
+Prepare spatial proteomics dataset for training or prediction of cell types.
+- [sp_celltype_train](https://github.com/WEHI-SODA-Hub/sp_celltype_train): Train
+an XGBoost model on a pre-processed labelled spatial proteomics dataset.
+- [sp_celltype_apply](https://github.com/WEHI-SODA-Hub/sp_celltype_apply): Apply
+a trained XGBoost model on pre-processed spatial proteomics data to predict cell
+types.
+
+### Analysis tools
+
+- [MibiSegmentation](https://github.com/WEHI-SODA-Hub/MibiSegmentation): A
+CLI for Mesmer segmentation of COMET and MIBI TIFFs used in the
+sp_segment pipeline. Automatically combines membrane channels.
+- [cellmeasurement](https://github.com/WEHI-SODA-Hub/cellmeasurement):
+Groovy app for calculating cell measurements from whole-cell and nuclear
+masks used in the sp_segment pipeline. Performs matching of
+whole-cells and nuclei and automates calculation of measurements using the
+QuPath API.
+- [spatialVis](https://github.com/WEHI-SODA-Hub/spatialVis): R package for
+downstream plots and spatial analyses for spatial proteomics. Provides
+functions for plotting cell segmentation and phenotyping QC metrics, as well
+as a report template for generating reports. Used to generate segmentation
+reports for the sp_segment pipeline.
 
 ### Metadata tools
 
